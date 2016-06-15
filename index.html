@@ -4,19 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello World!</title>
+  <style>
+    /*TODO -webkit-app-region 加入以拖動*/
+  </style>
 </head>
 
 <body>
   <h1>Hello World!</h1>
-  We are using node <script>document.write(process.versions.node)</script>, Chromium <script>document.write(process.versions.chrome)</script>,
-  and Electron <script>document.write(process.versions.electron)</script>.
-  <button id="showMessage">
+  <p>
+    We are using node <script>document.write(process.versions.node)</script>, Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+    <button id="showMessage">
       test
     </button>
-</body>
-
-<script>
+  </p>
+  <script>
     require('./renderer.js');
   </script>
+</body>
 
 </html>
