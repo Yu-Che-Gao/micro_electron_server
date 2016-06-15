@@ -4,20 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello World!</title>
+  <link rel="stylesheet" href="css/photon.css">
   <style>
-    /*TODO -webkit-app-region 加入以拖動*/
+      header {
+        -webkit-app-region: drag;
+      }
   </style>
 </head>
 
 <body>
-  <h1>Hello World!</h1>
+  <!--<h1>Hello World!</h1>
   <p>
     We are using node <script>document.write(process.versions.node)</script>, Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
-    <button id="showMessage">
-      test
-    </button>
   </p>
+-->
+
+  <div class="window">
+    <!-- .toolbar-header sits at the top of your app -->
+    <header class="toolbar toolbar-header">
+      <h1 class="title">Photon</h1>
+    </header>
+
+    <!-- Your app's content goes inside .window-content -->
+    <div class="window-content">
+      <div class="padded-more">
+        <h1>Welcome to Photon</h1>
+        <p>
+          Thanks for downloading Photon. This is an example HTML page that's linked up to compiled Photon CSS, has the proper meta
+          tags and the HTML structure.
+        </p>
+        <p>
+          <button id="showMessage" class="btn btn-primary">
+            Save
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+
   <script>
     require('./renderer.js');
   </script>
