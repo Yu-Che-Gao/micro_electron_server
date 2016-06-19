@@ -5,4 +5,6 @@ exports.createWindow = function () {
   mainWindow.on('closed', function () {
     mainWindow = null;
   });
+
+  // ipcMain.sendSync('mainWindow', mainWindow);
 };

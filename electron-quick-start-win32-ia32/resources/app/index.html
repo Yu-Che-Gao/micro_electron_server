@@ -9,6 +9,27 @@
     header {
       -webkit-app-region: drag;
     }
+    
+    .toolbar-header {
+      display: inline-flex;
+    }
+    
+    .toolbar-header .title {
+      flex-grow: 1;
+      text-align: center;
+    }
+    
+    .toolbar-header .action-group {
+      list-style: none;
+      margin: 0 0 0 auto;
+      padding: 1px 5px 0 2px;
+    }
+    
+    .toolbar-header .action-group .action-button {
+      display: inline-block;
+      padding: 0 5px;
+      -webkit-app-region: no-drag;
+    }
   </style>
 </head>
 
@@ -16,38 +37,49 @@
   <div class="window">
     <header class="toolbar toolbar-header">
       <h1 class="title">Photon</h1>
+
+      <ul class="action-group">
+        <li class="action-button">
+          <span class="icon icon-plus-circled" id="maximized"></span>
+        </li>
+        <li class="action-button">
+          <span class="icon icon-minus-circled" id="minimized"></span>
+        </li>
+        <li class="action-button">
+          <span class="icon icon-cancel-circled" id="closed"></span>
+        </li>
+      </ul>
     </header>
     <div class="window-content">
       <div class="pane-group">
         <div class="pane-sm sidebar">
           <nav class="nav-group">
             <h5 class="nav-group-title">Favorites</h5>
-            <a class="nav-group-item active">
+            <span class="nav-group-item active">
               <span class="icon icon-record" style="color:#fc605b"></span> connors
-            </a>
-            <span class="nav-group-item">
-            <span class="icon icon-record" style="color:#fc605b"></span> Downloads
             </span>
             <span class="nav-group-item">
-            <span class="icon icon-record" style="color:#34c84a"></span> Documents
+              <span class="icon icon-record" style="color:#fc605b"></span> Downloads
             </span>
             <span class="nav-group-item">
-            <span class="icon icon-record" style="color:#57acf5"></span> AirPlay
+              <span class="icon icon-record" style="color:#34c84a"></span> Documents
             </span>
             <span class="nav-group-item">
-            <span class="icon icon-record"></span> Applications
+              <span class="icon icon-record" style="color:#57acf5"></span> AirPlay
             </span>
             <span class="nav-group-item">
-            <span class="icon icon-record"></span> Desktop
+              <span class="icon icon-record"></span> Applications
+            </span>
+            <span class="nav-group-item">
+              <span class="icon icon-record"></span> Desktop
             </span>
           </nav>
         </div>
         <div class="pane">
           <div class="padded-more">
-            <h1>Welcome to Photon</h1>
+            <h1>我的微型server開發</h1>
             <p>
-              Thanks for downloading Photon. This is an example HTML page that's linked up to compiled Photon CSS, has the proper meta
-              tags and the HTML structure.
+              測試中...
             </p>
             <p>
               <button id="showMessage" class="btn btn-primary">Save</button>
