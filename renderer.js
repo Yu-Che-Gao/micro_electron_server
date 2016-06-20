@@ -1,24 +1,25 @@
 const electron = require('electron');
 const remoteWindow = electron.remote;
+const currentWindow=remoteWindow.getCurrentWindow();
 document.getElementById('showMessage').addEventListener('click', function () {
     electron.ipcRenderer.send('open-information-dialog');
 });
 
 document.getElementById('maximized').addEventListener('click', function () {
-    switch (remoteWindow.getCurrentWindow().isMaximized()) {
+    switch (currentWindow.isMaximized()) {
         case true:
-            remoteWindow.getCurrentWindow().unmaximize();
+            currentWindow.unmaximize();
             break;
         case false:
-            remoteWindow.getCurrentWindow().maximize();
+            currentWindow.maximize();
             break;
     }
 });
 
 document.getElementById('minimized').addEventListener('click', function () {
-    remoteWindow.getCurrentWindow().minimize();
+    currentWindow.minimize();
 });
 
 document.getElementById('closed').addEventListener('click', function () {
-    remoteWindow.getCurrentWindow().close();
+    currentWindow.close();
 });
